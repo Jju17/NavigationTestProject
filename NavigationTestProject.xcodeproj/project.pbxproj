@@ -8,17 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		643E318C2C0B5221004E4CAE /* NavigationTestProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E318B2C0B5221004E4CAE /* NavigationTestProjectApp.swift */; };
-		643E318E2C0B5221004E4CAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E318D2C0B5221004E4CAE /* ContentView.swift */; };
+		643E318E2C0B5221004E4CAE /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E318D2C0B5221004E4CAE /* AppView.swift */; };
 		643E31902C0B5222004E4CAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 643E318F2C0B5222004E4CAE /* Assets.xcassets */; };
 		643E31932C0B5222004E4CAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 643E31922C0B5222004E4CAE /* Preview Assets.xcassets */; };
+		643E319B2C0B5272004E4CAE /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 643E319A2C0B5272004E4CAE /* ComposableArchitecture */; };
+		643E319D2C0B55C7004E4CAE /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E319C2C0B55C7004E4CAE /* TabView.swift */; };
+		643E319F2C0B55D0004E4CAE /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E319E2C0B55D0004E4CAE /* SigninView.swift */; };
+		643E31A12C0B55EB004E4CAE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E31A02C0B55EB004E4CAE /* HomeView.swift */; };
+		643E31A52C0B5850004E4CAE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E31A42C0B5850004E4CAE /* SettingsView.swift */; };
+		643E31A72C0B74AA004E4CAE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E31A62C0B74AA004E4CAE /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		643E31882C0B5221004E4CAE /* NavigationTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		643E318B2C0B5221004E4CAE /* NavigationTestProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTestProjectApp.swift; sourceTree = "<group>"; };
-		643E318D2C0B5221004E4CAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		643E318D2C0B5221004E4CAE /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		643E318F2C0B5222004E4CAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		643E31922C0B5222004E4CAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		643E319C2C0B55C7004E4CAE /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		643E319E2C0B55D0004E4CAE /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
+		643E31A02C0B55EB004E4CAE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		643E31A42C0B5850004E4CAE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		643E31A62C0B74AA004E4CAE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				643E319B2C0B5272004E4CAE /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,9 +64,14 @@
 			isa = PBXGroup;
 			children = (
 				643E318B2C0B5221004E4CAE /* NavigationTestProjectApp.swift */,
-				643E318D2C0B5221004E4CAE /* ContentView.swift */,
+				643E318D2C0B5221004E4CAE /* AppView.swift */,
 				643E318F2C0B5222004E4CAE /* Assets.xcassets */,
 				643E31912C0B5222004E4CAE /* Preview Content */,
+				643E319C2C0B55C7004E4CAE /* TabView.swift */,
+				643E319E2C0B55D0004E4CAE /* SigninView.swift */,
+				643E31A02C0B55EB004E4CAE /* HomeView.swift */,
+				643E31A42C0B5850004E4CAE /* SettingsView.swift */,
+				643E31A62C0B74AA004E4CAE /* ProfileView.swift */,
 			);
 			path = NavigationTestProject;
 			sourceTree = "<group>";
@@ -83,6 +100,9 @@
 			dependencies = (
 			);
 			name = NavigationTestProject;
+			packageProductDependencies = (
+				643E319A2C0B5272004E4CAE /* ComposableArchitecture */,
+			);
 			productName = NavigationTestProject;
 			productReference = 643E31882C0B5221004E4CAE /* NavigationTestProject.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +131,9 @@
 				Base,
 			);
 			mainGroup = 643E317F2C0B5221004E4CAE;
+			packageReferences = (
+				643E31992C0B5272004E4CAE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 643E31892C0B5221004E4CAE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				643E318E2C0B5221004E4CAE /* ContentView.swift in Sources */,
+				643E318E2C0B5221004E4CAE /* AppView.swift in Sources */,
+				643E319D2C0B55C7004E4CAE /* TabView.swift in Sources */,
+				643E319F2C0B55D0004E4CAE /* SigninView.swift in Sources */,
+				643E31A52C0B5850004E4CAE /* SettingsView.swift in Sources */,
+				643E31A12C0B55EB004E4CAE /* HomeView.swift in Sources */,
 				643E318C2C0B5221004E4CAE /* NavigationTestProjectApp.swift in Sources */,
+				643E31A72C0B74AA004E4CAE /* ProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +308,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +338,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,6 +374,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		643E31992C0B5272004E4CAE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		643E319A2C0B5272004E4CAE /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 643E31992C0B5272004E4CAE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 643E31802C0B5221004E4CAE /* Project object */;
 }
