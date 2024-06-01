@@ -10,9 +10,16 @@ import SwiftUI
 
 @Reducer
 struct TabFeature {
+
+    @Reducer
+    enum Path {
+        case profile(ProfileFeature)
+    }
+
     @ObservableState
     struct State {
         var selectedTab: Tab = .home
+        var path = StackState<Path.State>()
         var home = HomeFeature.State()
         var settings = SettingsFeature.State()
     }
@@ -20,6 +27,7 @@ struct TabFeature {
         case tabChanged(Tab)
         case home(HomeFeature.Action)
         case settings(SettingsFeature.Action)
+        case path(StackActionOf<Path>)
     }
 
     var body: some ReducerOf<Self> {
@@ -28,10 +36,11 @@ struct TabFeature {
             case let .tabChanged(tab):
                 state.selectedTab = tab
                 return .none
-            case .home, .settings:
+            case .home, .settings, .path:
                 return .none
             }
         }
+        .forEach(\.path, action: \.path)
     }
 }
 
@@ -45,12 +54,19 @@ struct MyTabView: View {
     var body: some View {
         WithPerceptionTracking {
             TabView(selection: $store.selectedTab.sending(\.tabChanged)) {
-                HomeView(
-                    store: self.store.scope(
-                        state: \.home,
-                        action: \.home
+                NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
+                    HomeView(
+                        store: self.store.scope(
+                            state: \.home,
+                            action: \.home
+                        )
                     )
-                )
+                } destination: { store in
+                    switch store.case {
+                    case let .profile(store):
+                        ProfileView(store: store)
+                    }
+                }
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }

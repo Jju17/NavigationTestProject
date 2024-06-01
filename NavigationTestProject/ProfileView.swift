@@ -26,7 +26,7 @@ struct ProfileView: View {
     var store: StoreOf<ProfileFeature>
 
     var body: some View {
-        Text("SettingsView")
+        Text("ProfileView")
     }
 }
 

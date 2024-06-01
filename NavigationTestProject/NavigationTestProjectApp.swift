@@ -14,6 +14,7 @@ struct NavigationTestProjectApp: App {
         WindowGroup {
             AppView(store: Store(initialState: AppFeature.State.tab(TabFeature.State())) {
                 AppFeature()
+                    ._printChanges()
             })
         }
     }
